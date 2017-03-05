@@ -102,9 +102,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = 'https://dry-dusk-29159.herokuapp.com/creditcards';
+    const url = 'http://dry-dusk-29159.herokuapp.com/creditcards';
     fetch(url, {mode: 'no-cors'})
-    .then( res => res.json(res) )
+    .then( res => res.json() )
     .then( cards => {
       console.log(cards.creditcards)
       this.setState({

@@ -103,7 +103,8 @@ class App extends Component {
     return bestCard;
   }
 
-  setLoggedIn() {
+  setLoggedIn(googleUser) {
+    const { _id } = googleUser;
     this.setState({
       loggedIn: true,
       _id
@@ -127,6 +128,7 @@ class App extends Component {
   // }
 
   render() {
+    const loggedIn = this.state.loggedIn;
     if (loggedIn) {
       return (
         <div className="App">

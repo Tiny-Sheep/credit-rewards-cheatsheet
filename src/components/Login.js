@@ -1,30 +1,16 @@
-import React, { Component } from 'react';
-import GoogleLogin from 'react-google-login-component';
-
-const responseGoogle = (res) => {
-  if (err) throw err;
-  const {tokenId, profileObj: {email, givenName}} = res;
-  const server = process.env.server
-
-}
-
-const client_id = process.env.GOOGLE_CLIENT_ID;
-
-
+import React from 'react';
+import GoogleLogin from 'react-google-login';
 
 const Login = ( {setLoggedIn} ) => {
 
-
-}
-
-
-  responseGoogle(googleUser) {
-    const id_token = googleUser.getAuthResponse().id_token;
-    console.log({accessToken: id_token});
+  const responseGoogle = (res) => {
+    if (res.err) throw res.err;
+    const { tokenId, profileObj: {email, givenName} } = res;
   }
 
-  render() {
-    return(
+    const client_id = process.env.GOOGLE_CLIENT_ID;
+
+    return (
       <div>
         <GoogleLogin
           clientId={client_id}
@@ -35,7 +21,8 @@ const Login = ( {setLoggedIn} ) => {
         />
       </div>
     )
-  }
+
+
 }
 
 export default Login;

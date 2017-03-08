@@ -6,6 +6,7 @@ import PurchaseCategories from './PurchaseCategories';
 import CreditCardsList from './CreditCardsList';
 import DisplayCard from './DisplayCard';
 import Footer from './Footer';
+import Login from './Login'
 // import { Router, Route} from 'react-router'
 
 
@@ -75,9 +76,10 @@ class App extends Component {
       cards: cards,
       selectedCategory: null,
       bestCard: null,
-      userId: null
+      loggedIn: false
     }
     this.setCategory = this.setCategory.bind(this);
+    this.setLoggedIn = this.setLoggedIn.bind(this);
   }
 
 
@@ -101,6 +103,13 @@ class App extends Component {
     return bestCard;
   }
 
+  setLoggedIn() {
+    this.setState({
+      loggedIn: true,
+      _id
+    })
+  }
+
   // componentWillMount() {
   //   // const url = 'https://dry-dusk-29159.herokuapp.com/creditcards';
   //   // const localServer = 'https://localhost:8080/creditcards';
@@ -118,23 +127,29 @@ class App extends Component {
   // }
 
   render() {
-    return (
-      <div className="App">
-        <CreditCardNavBar />
-        <GettingStarted />
-        <PurchaseCategories
-          setCategory={this.setCategory}
-        />
-        <DisplayCard
-          card={this.state.bestCard}
-          category={this.state.selectedCategory}
-        />
-        <CreditCardsList
-          cards={this.state.cards}
-        />
-        <Footer />
-      </div>
-    );
+    if (loggedIn) {
+      return (
+        <div className="App">
+          <CreditCardNavBar />
+          <GettingStarted />
+          <PurchaseCategories
+            setCategory={this.setCategory}
+          />
+          <DisplayCard
+            card={this.state.bestCard}
+            category={this.state.selectedCategory}
+          />
+          <CreditCardsList
+            cards={this.state.cards}
+          />
+          <Footer />
+        </div>
+      );
+    } else {
+      return (
+        <Login setLoggedIn={this.setLoggedIn} />
+      )
+    }
   }
 }
 

@@ -76,7 +76,8 @@ class App extends Component {
       cards: cards,
       selectedCategory: null,
       bestCard: null,
-      loggedIn: false
+      loggedIn: false,
+      _id: ""
     }
     this.setCategory = this.setCategory.bind(this);
     this.setLoggedIn = this.setLoggedIn.bind(this);
@@ -104,10 +105,13 @@ class App extends Component {
   }
 
   setLoggedIn(googleUser) {
-    const { _id } = googleUser;
+    const { email, name, imageUrl, googleId } = googleUser;
     this.setState({
       loggedIn: true,
-      _id
+      _id: googleId,
+      name,
+      email,
+      imageUrl
     })
   }
 
@@ -132,7 +136,7 @@ class App extends Component {
     if (loggedIn) {
       return (
         <div className="App">
-          <CreditCardNavBar />
+          <CreditCardNavBar name={this.state.name}/>
           <GettingStarted />
           <PurchaseCategories
             setCategory={this.setCategory}

@@ -5,12 +5,13 @@ import { Navbar } from 'react-bootstrap';
 
 class CreditCardNavBar extends Component {
   render() {
+    console.log(this.props)
     return (
       <div>
         <Navbar collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              The Rewards Cheatsheet
+              <h1>Hello {this.props.name}</h1>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

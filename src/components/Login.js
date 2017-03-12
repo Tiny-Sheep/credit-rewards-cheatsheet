@@ -1,6 +1,9 @@
 require ('dotenv').config();
 import React from 'react';
 import GoogleLogin from 'react-google-login';
+const client_id = process.env.GOOGLE_CLIENT_ID;
+
+
 
 const Login = ( {setLoggedIn} ) => {
 
@@ -14,7 +17,6 @@ const Login = ( {setLoggedIn} ) => {
     }
   }
 
-  const client_id = "860669603492-us0ks2kc55468d6b7lrucpvot1942ght.apps.googleusercontent.com"
 
   return (
     <div>

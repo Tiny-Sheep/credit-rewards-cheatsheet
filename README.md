@@ -1,6 +1,6 @@
-###Credit-Rewards-Cheatsheet
+##Credit-Rewards-Cheatsheet
 
-###OVERVIEW
+##OVERVIEW
 
 This a credit card rewards cheatsheet. When making purchases it can 
 be a burden to remember which credit card to use for each category. 
@@ -9,7 +9,7 @@ for that purchase.
 
 
 
-###TECHNOLOGIES
+##TECHNOLOGIES
 
 - Javascript
 - Node
@@ -22,7 +22,7 @@ for that purchase.
 - React-Router
 - Trello
 
-###Major hurdles and unsolved problem
+##Major hurdles and unsolved problem
 
 The biggest hurdle for this project was trying to fully grasp
 how React functions. Before starting the project I watched a few

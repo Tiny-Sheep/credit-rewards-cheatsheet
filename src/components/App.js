@@ -1,3 +1,4 @@
+require ('dotenv')
 import React, { Component } from 'react';
 import '../App.css';
 import GettingStarted from './GettingStarted';
@@ -77,7 +78,8 @@ class App extends Component {
       selectedCategory: null,
       bestCard: null,
       loggedIn: false,
-      _id: ""
+      _id: "",
+      client_id: process.env.GOGGLE_CLIENT_ID
     }
     this.setCategory = this.setCategory.bind(this);
     this.setLoggedIn = this.setLoggedIn.bind(this);

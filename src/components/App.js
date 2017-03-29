@@ -7,7 +7,7 @@ import PurchaseCategories from './PurchaseCategories';
 import CreditCardsList from './CreditCardsList';
 import DisplayCard from './DisplayCard';
 import Footer from './Footer';
-import Login from './Login'
+// import Login from './Login'
 // import { Router, Route} from 'react-router'
 
 
@@ -74,7 +74,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cards: null,
+      cards: [],
       selectedCategory: null,
       bestCard: null,
       loggedIn: false,
@@ -135,8 +135,8 @@ class App extends Component {
   }
 
   render() {
-    const loggedIn = this.state.loggedIn;
-    if (loggedIn) {
+    // const loggedIn = this.state.loggedIn;
+    // if (loggedIn) {
       return (
         <div className="App">
           <CreditCardNavBar name={this.state.name}/>
@@ -154,11 +154,11 @@ class App extends Component {
           <Footer />
         </div>
       );
-    } else {
-      return (
-        <Login setLoggedIn={this.setLoggedIn} />
-      )
-    }
+    // } else {
+    //   return (
+    //     <Login setLoggedIn={this.setLoggedIn} />
+    //   )
+    // }
   }
 }
 

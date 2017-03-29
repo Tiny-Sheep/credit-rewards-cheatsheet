@@ -11,7 +11,7 @@ class CreditCardNavBar extends Component {
         <Navbar collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <h1>Hello {this.props.name}</h1>
+              <h1>Welcome {this.props.name}</h1>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

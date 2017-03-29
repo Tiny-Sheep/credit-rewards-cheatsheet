@@ -5,7 +5,6 @@ import { Navbar } from 'react-bootstrap';
 
 class CreditCardNavBar extends Component {
   render() {
-    console.log(this.props)
     return (
       <div>
         <Navbar collapseOnSelect>

@@ -10,66 +10,6 @@ import Footer from './Footer';
 // import Login from './Login'
 // import { Router, Route} from 'react-router'
 
-
-
-// const chaseFreedom = {
-//   name: "Chase Freedom",
-//   category: {
-//     dining: 1,
-//     travel: 1,
-//     gas: 5,
-//     costco: 1,
-//     groceries: 1,
-//     entertainment: 1,
-//     miscellaneous: 1
-//   },
-//   valuedEarning: 2.1
-// }
-
-// const chaseSapphirePreferred = {
-//   name: "Chase Sapphire Preferred",
-//   category: {
-//     dining: 2,
-//     travel: 2,
-//     gas: 1,
-//     costco: 1,
-//     groceries: 1,
-//     entertainment: 1,
-//     miscellaneous: 1
-//   },
-//   valuedEarning: 2.1
-// }
-
-// const discoverCard = {
-//   name: "Discover it",
-//   category: {
-//     dining: 1,
-//     travel: 1,
-//     gas: 5,
-//     costco: 5,
-//     groceries: 1,
-//     entertainment: 1,
-//     miscellaneous: 1
-//   },
-//   valuedEarning: 1
-// }
-
-// const blueCashEveryday = {
-//   name: "Blue Cash Everyday by American Express",
-//   category: {
-//     dining: 1,
-//     travel: 1,
-//     gas: 3,
-//     costco: 1,
-//     groceries: 1,
-//     entertainment: 1,
-//     miscellaneous: 1
-//   },
-//   valuedEarning: 1.9
-// }
-
-// const cards = [chaseFreedom, chaseSapphirePreferred, discoverCard, blueCashEveryday];
-
 class App extends Component {
   constructor() {
     super();

@@ -3,12 +3,6 @@ import React, { Component } from 'react';
 import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 class CreditCardsList extends Component  {
-  constructor() {
-    super();
-    this.state = {
-      cards: this.props
-    }
-  }
 
   render() {
     return (
@@ -20,11 +14,17 @@ class CreditCardsList extends Component  {
               <Panel collapsible header={card.name} key={i}>
                 <ListGroup fill>
                   <ListGroupItem>Dining: {card.category.dining}x</ListGroupItem>
-                  <ListGroupItem>Travel: {card.category.travel}x</ListGroupItem>
+                  <ListGroupItem>Airfare: {card.category.airfare}x</ListGroupItem>
+                  <ListGroupItem>Hotels: {card.category.hotels}x</ListGroupItem>
+                  <ListGroupItem>Ground Transportation: {card.category.ground_transportation}x</ListGroupItem>
                   <ListGroupItem>Gas: {card.category.gas}x</ListGroupItem>
-                  <ListGroupItem>Costco: {card.category.costco}x</ListGroupItem>
+                  <ListGroupItem>Amazon: {card.category.amazon}x</ListGroupItem>
+                  <ListGroupItem>Wholesale Clubs: {card.category.costco}x</ListGroupItem>
                   <ListGroupItem>Groceries: {card.category.groceries}x</ListGroupItem>
+                  <ListGroupItem>Department Stores: {card.category.department_stores}x</ListGroupItem>
                   <ListGroupItem>Entertainment: {card.category.entertainment}x</ListGroupItem>
+                  <ListGroupItem>Home Improvement: {card.category.home_improvement}x</ListGroupItem>
+                  <ListGroupItem>Drug Stores: {card.category.drug_stores}x</ListGroupItem>
                   <ListGroupItem>Miscellaneous: {card.category.miscellaneous}x</ListGroupItem>
                   <ListGroupItem>Valued Earning: {card.valuedEarning}x</ListGroupItem>
                 </ListGroup>

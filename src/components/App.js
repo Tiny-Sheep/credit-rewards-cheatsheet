@@ -59,7 +59,7 @@ class App extends Component {
 
   componentWillMount() {
     // const localServer = 'https://localhost:8080/creditcards';
-    const creditCardDB = 'https://credit-card-rewards-database.herokuapp.com/creditcards'
+    const creditCardDB = 'https://credit-card-rewards-database.herokuapp.com/creditcards.json'
     fetch(creditCardDB, {
       headers: {
         'Content-Type': 'application/json',

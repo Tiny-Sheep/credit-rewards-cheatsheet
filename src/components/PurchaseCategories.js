@@ -22,7 +22,7 @@ class PurchaseCategories extends Component {
 
           <ButtonGroup bsSize="large">
             <Button onClick={ () => this.props.setCategory('amazon')}><span className="fa fa-amazon"> Amazon</span></Button>
-            <Button onClick={ () => this.props.setCategory('wholesale')}><span className="fa fa-gift"> Wholesale Clubs</span></Button>
+            <Button onClick={ () => this.props.setCategory('wholesale_clubs')}><span className="fa fa-gift"> Wholesale Clubs</span></Button>
             <Button onClick={ () => this.props.setCategory('groceries')}><span className="fa fa-shopping-cart"> Groceries</span></Button>
             <Button onClick={ () => this.props.setCategory('department_stores')}><span className="fa fa-shopping-bag"> Department Stores</span></Button>
           </ButtonGroup>

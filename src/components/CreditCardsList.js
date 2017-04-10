@@ -19,7 +19,7 @@ class CreditCardsList extends Component  {
                   <ListGroupItem>Ground Transportation: {card.category.ground_transportation}x</ListGroupItem>
                   <ListGroupItem>Gas: {card.category.gas}x</ListGroupItem>
                   <ListGroupItem>Amazon: {card.category.amazon}x</ListGroupItem>
-                  <ListGroupItem>Wholesale Clubs: {card.category.costco}x</ListGroupItem>
+                  <ListGroupItem>Wholesale Clubs: {card.category.wholesale_clubs}x</ListGroupItem>
                   <ListGroupItem>Groceries: {card.category.groceries}x</ListGroupItem>
                   <ListGroupItem>Department Stores: {card.category.department_stores}x</ListGroupItem>
                   <ListGroupItem>Entertainment: {card.category.entertainment}x</ListGroupItem>

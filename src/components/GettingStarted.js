@@ -9,7 +9,7 @@ class GettingStarted extends Component {
     return (
       <div>
         <Jumbotron>
-          <h1>The Ultimate Credit Card Cheatsheet</h1>
+          <h1>The Ultimate Credit Card Cheat Sheet</h1>
           <h3>Know which credit card to use for all your purchases!</h3>
           <Button bsStyle="primary">Get Started</Button>
         </Jumbotron>

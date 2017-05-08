@@ -7,9 +7,8 @@ const Footer = () => {
   return (
     <Jumbotron style={ jumbotronStyle }>
       <h3>Updated May 07, 2017</h3>
-      <h3>Valued earnings rates are based on <a style={ linkColorStyle } href="http://www.thepointsguy.com">ThePointsGuy</a></h3>
-      <h5>Created by Kristopher Parchen</h5>
-      <h5>Contact: <a style={ linkColorStyle } href="mailto:kkparchen@gmail.com">kkparchen@gmail.com</a></h5>
+      <h5>Email: <a style={ linkColorStyle } href="mailto:kkparchen@gmail.com">kkparchen@gmail.com</a></h5>
+      <h5>©Kristopher Parchen</h5>
     </Jumbotron>
   );
 };

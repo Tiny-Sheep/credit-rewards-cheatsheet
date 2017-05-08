@@ -4,10 +4,11 @@ import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 const CreditCardsList = (props) => {
   const { cards } = props;
-    
+  const { jumbotronStyle } = styles;    
+
   return (
     <div>
-      <Jumbotron>
+      <Jumbotron style={jumbotronStyle}>
         <h2>List of Credit Cards</h2>
         {cards.map(card => {
           return (
@@ -36,5 +37,10 @@ const CreditCardsList = (props) => {
   )
 }
 
+const styles = {
+  jumbotronStyle: {
+    backgroundColor: 'rgb(200,240,255)'
+  }
+};
 
 export default CreditCardsList;

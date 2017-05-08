@@ -4,10 +4,11 @@ import { Button, ButtonGroup } from 'react-bootstrap';
 
 const PurchaseCategories = (props) => {
   const { setCategory } = props;
-
+  const { jumbotronStyle } = styles;
+  
   return (
     <div>
-      <Jumbotron>
+      <Jumbotron style={jumbotronStyle}>
         <h2>Select Your Category</h2>
 
         <ButtonGroup bsSize="large">
@@ -59,8 +60,14 @@ const PurchaseCategories = (props) => {
       </Jumbotron>
       {props.children}
     </div>
-  )
-}
+  );
+};
+
+const styles = {
+  jumbotronStyle: {
+    backgroundColor: 'rgb(200,240,255)'
+  }
+};
 
 
 export default PurchaseCategories

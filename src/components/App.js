@@ -1,6 +1,5 @@
 require ('dotenv')
 import React, { Component } from 'react';
-import '../App.css';
 import GettingStarted from './GettingStarted';
 import CreditCardNavBar from './CreditCardNavBar';
 import PurchaseCategories from './PurchaseCategories';
@@ -75,10 +74,12 @@ class App extends Component {
   }
 
   render() {
+    const { appStyle } = styles;
     // const loggedIn = this.state.loggedIn;
     // if (loggedIn) {
+    
       return (
-        <div className="App">
+        <div style={appStyle}>
           <CreditCardNavBar name={this.state.name}/>
           <GettingStarted />
           <PurchaseCategories
@@ -101,6 +102,12 @@ class App extends Component {
     // }
   }
 }
+
+const styles = {
+  appStyle: {
+    textAlign: 'center'
+  }
+};
 
 export default App;
 

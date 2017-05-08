@@ -1,5 +1,6 @@
 require ('dotenv')
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import GettingStarted from './GettingStarted';
 import CreditCardNavBar from './CreditCardNavBar';
 import PurchaseCategories from './PurchaseCategories';

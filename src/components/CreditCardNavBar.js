@@ -5,10 +5,11 @@ import { Navbar } from 'react-bootstrap';
 
 const CreditCardNavBar = (props) => {
   const { name } = props;
+  const { navBarStyle } = styles;
 
   return (
     <div>
-      <Navbar collapseOnSelect>
+      <Navbar collapseOnSelect style={navBarStyle}>
         <Navbar.Header>
           <Navbar.Brand>
             <h1>Welcome {name}</h1>
@@ -20,5 +21,12 @@ const CreditCardNavBar = (props) => {
     </div>
   )
 }
+
+const styles = {
+  navBarStyle: {
+    backgroundColor: 'rgb(200,240,255)'
+  }
+};
+
 
 export default CreditCardNavBar;

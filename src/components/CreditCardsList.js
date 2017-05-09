@@ -2,10 +2,13 @@ import React from 'react';
 // import { Button, ButtonGroup, Jumbotron } from 'react-bootstrap';
 import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const CreditCardsList = (props) => {
-  const { cards } = props;
+const CreditCardsList = ({ cards }) => {
   const { jumbotronStyle } = styles;    
-
+  
+  if (!cards) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <div>
       <Jumbotron style={jumbotronStyle}>

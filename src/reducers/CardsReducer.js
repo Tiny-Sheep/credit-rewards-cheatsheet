@@ -1,9 +1,10 @@
-import { FETCH_CARDS } from '../actions/index';
+import _ from 'lodash';
+import { FETCH_CARDS } from '../actions';
 
 export default function(state = {}, action) {
     switch (action.type) {
     case FETCH_CARDS:
-        return 
+        return _.mapKeys(action.payload.data.creditcards, '_id');
     default:
         return state;
     }

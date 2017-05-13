@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCards } from '../actions';
 
 class CardsIndex extends Component {
+    componentWillMount() {
+        this.props.fetchCards();
+    }
+    
     render() {
+        console.log(this.props.cards)
         return (
             <div>
                 Hello
@@ -10,4 +17,10 @@ class CardsIndex extends Component {
     }
 }
 
-export default CardsIndex;
+function mapStateToProps(state) {
+    return {
+        cards: state.cards
+    }
+}
+
+export default connect(mapStateToProps, { fetchCards })(CardsIndex);

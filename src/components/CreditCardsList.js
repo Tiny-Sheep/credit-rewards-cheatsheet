@@ -1,14 +1,15 @@
 import React from 'react';
-// import { Button, ButtonGroup, Jumbotron } from 'react-bootstrap';
 import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 const CreditCardsList = ({ cards }) => {
-  const { jumbotronStyle } = styles;    
   
   if (!cards) {
     return <div>Loading...</div>;
   }
   
+  const { jumbotronStyle } = styles;    
+  
+
   return (
     <div>
       <Jumbotron style={jumbotronStyle}>

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCards } from '../actions';
+import { fetchCards, setCategory } from '../actions';
+
+import CreditCardNavBar from './CreditCardNavBar';
+import PurchaseCategories from './PurchaseCategories';
+import CreditCardsList from './CreditCardsList';
+import DisplayCard from './DisplayCard';
 
 class CardsIndex extends Component {
     componentWillMount() {
@@ -8,19 +13,22 @@ class CardsIndex extends Component {
     }
     
     render() {
-        console.log(this.props.cards)
         return (
             <div>
-                Hello
+                <CreditCardNavBar />
+                <PurchaseCategories />
+                <CreditCardsList />
+                <DisplayCard />
             </div>
-        )
+        );
     }
 }
 
 function mapStateToProps(state) {
     return {
-        cards: state.cards
+        cards: state.cards,
+        selectedCategory: state.setCategory
     }
 }
 
-export default connect(mapStateToProps, { fetchCards })(CardsIndex);
+export default connect(mapStateToProps, { fetchCards, setCategory })(CardsIndex);

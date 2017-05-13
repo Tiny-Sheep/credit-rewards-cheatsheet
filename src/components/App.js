@@ -1,4 +1,5 @@
-require ('dotenv')
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GettingStarted from './GettingStarted';

@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Image } from 'react-bootstrap';
 
-const DisplayCard = (props) => {
-  const { card, category } = props;
-  const { cardNameStyles, valueStyles } = styles;
+class DisplayCard extends Component {
+  render() {
+    const { card, category } = this.props;
+    const { cardNameStyles, valueStyles } = styles;
 
-  if (!card) return null;
-  
-  return ( 
-    <div>
-      <Image src={card.image} thumbnail></Image>
+    if (!card) return null;
+
+    return ( 
+      <div>
+        <Image src={card.image} thumbnail></Image>
+        
+        <h2>Use <span style={ cardNameStyles }>{card.name}</span> For <span style={ cardNameStyles }>{card.category[category]}x</span> Reward Points!</h2>
+        <h2>Which is valued at <span style={ valueStyles }> { (card.valuedEarning * card.category[category]).toFixed(1)}</span> cents per dollar spent!</h2>
       
-      <h2>Use <span style={ cardNameStyles }>{card.name}</span> For <span style={ cardNameStyles }>{card.category[category]}x</span> Reward Points!</h2>
-      <h2>Which is valued at <span style={ valueStyles }> { (card.valuedEarning * card.category[category]).toFixed(1)}</span> cents per dollar spent!</h2>
-    
-    </div>
-  );
-};
+      </div>
+    );
+  }
+}
 
 const styles = {
   cardNameStyles: {
@@ -29,4 +32,10 @@ const styles = {
   }
 };
 
-export default DisplayCard;
+function mapStateToProps(state) {
+  return {
+    card: state.bestCard
+  }
+}
+
+export default connect(mapStateToProps)(DisplayCard);

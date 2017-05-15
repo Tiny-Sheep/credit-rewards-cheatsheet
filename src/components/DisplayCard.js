@@ -9,10 +9,8 @@ class DisplayCard extends Component {
 
     const { cardNameStyles, valueStyles } = styles;
 
+    if (!bestCard) return <div></div>;
     
-    console.log('bestCard:', bestCard, 'selectedCategory:', selectedCategory);
-    if (!bestCard) return <div>Select a Category</div>;
-
     return ( 
       <div>
         <Image src={bestCard.image} thumbnail></Image>

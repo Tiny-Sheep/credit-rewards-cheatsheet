@@ -87,7 +87,6 @@ const styles = {
 function mapStateToProps(state) {
   return {
     cards: state.cards
-    // bestCard: state.bestCard
   }
 }
 

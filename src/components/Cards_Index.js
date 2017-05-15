@@ -14,9 +14,10 @@ class CardsIndex extends Component {
     }
     
     render() {
-        // console.log(this.props.cards)
+        const { indexStyle } = styles;
+        
         return (
-            <div>
+            <div style={indexStyle}>
                 <CreditCardNavBar />
                 <PurchaseCategories />
                 <DisplayCard />
@@ -26,6 +27,13 @@ class CardsIndex extends Component {
         );
     }
 }
+
+const styles = {
+  indexStyle: {
+    textAlign: 'center'
+  }
+};
+
 
 function mapStateToProps(state) {
     return {

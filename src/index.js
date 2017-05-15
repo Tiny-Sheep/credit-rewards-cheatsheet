@@ -10,8 +10,6 @@ import reducers from './reducers';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 import CardsIndex from './components/Cards_Index';
-import App from './components/App';
-import './index.css';
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchCards } from '../actions';
 
 import CreditCardNavBar from './CreditCardNavBar';
+import GettingStarted from './GettingStarted';
 import PurchaseCategories from './PurchaseCategories';
 import CreditCardsList from './CreditCardsList';
 import DisplayCard from './DisplayCard';
@@ -19,6 +20,7 @@ class CardsIndex extends Component {
         return (
             <div style={indexStyle}>
                 <CreditCardNavBar />
+                <GettingStarted />
                 <PurchaseCategories />
                 <DisplayCard />
                 <CreditCardsList />

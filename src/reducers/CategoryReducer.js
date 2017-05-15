@@ -1,9 +1,9 @@
-import { SET_CATEGORY } from '../actions';
+import { SELECTED_CATEGORY } from '../actions';
 
 export default function(state = {}, action) {
     switch(action.type) {
-    case SET_CATEGORY:
-        return { ...state, setCategory: action.payload }
+    case SELECTED_CATEGORY:
+        return { selectedCategory: action.payload }
     default:
         return state;
     }

@@ -10,12 +10,16 @@ import reducers from './reducers';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 import CardsIndex from './components/Cards_Index';
+import CreditCardsList from './components/CreditCardsList';
+import GetttingStarted from './components/GettingStarted';
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={CardsIndex} />
+        <Route path="/cards" component={CreditCardsList} />
+        <Route path="/dashboard" component={CardsIndex} />
+        <Route path="/" component={GetttingStarted} />
       </Switch>
     </BrowserRouter>
   </Provider>,

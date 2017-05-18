@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 class CreditCardsList extends Component {
+  
+  
   render() {
     const { cards } = this.props;
     const { jumbotronStyle } = styles;    
@@ -12,7 +14,7 @@ class CreditCardsList extends Component {
     if (!cards) {
       return <div>Loading...</div>;
     }
-
+    
     return (
       <div>
         <Jumbotron style={jumbotronStyle}>

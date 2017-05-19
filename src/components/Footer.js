@@ -6,8 +6,8 @@ const Footer = () => {
 
   return (
     <Jumbotron style={ jumbotronStyle }>
-      <h3>Updated May 15, 2017</h3>
-      <h5><a href="http://krystneto.github.io/portfolio/">About Me</a></h5>
+      <h3>Updated May 18, 2017</h3>
+      <h5><a style={linkColorStyle} href="http://krystneto.github.io/portfolio/">About Me</a></h5>
       <h5>Email: <a style={ linkColorStyle } href="mailto:kkparchen@gmail.com">kkparchen@gmail.com</a></h5>
       <h5>©Kristopher Parchen</h5>
     </Jumbotron>
@@ -21,6 +21,9 @@ const styles = {
   },
   linkColorStyle: {
     color: 'turquoise'
+  },
+  textStyle: {
+    color: 'grey'
   }
 };
 

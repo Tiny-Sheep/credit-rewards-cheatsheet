@@ -18,19 +18,20 @@ class CardsIndex extends Component {
         
         return (
             <div style={indexStyle}>
-                <CreditCardNavBar />
                 <PurchaseCategories />
                 <DisplayCard />
-                <CreditCardsList />
                 <Footer />
             </div>
         );
     }
 }
 
+// const imgURL = 'http://i.imgur.com/cqxzeR2.jpg'
 const styles = {
   indexStyle: {
-    textAlign: 'center'
+    textAlign: 'center',
+    // backgroundImage: `url(${imgURL})`
+    backgroundColor: 'white'
   }
 };
 

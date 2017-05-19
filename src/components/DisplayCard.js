@@ -40,29 +40,32 @@ class DisplayCard extends Component {
     const { bestCard } = this.props.bestCard;
     const { selectedCategory } = this.props.selectedCategory;
 
-    const { cardNameStyles, valueStyles } = styles;
+    const { cardNameStyle, valueStyle, textStyle } = styles;
 
     if (!bestCard) return <div></div>;
     
     return ( 
-      <div>
+      <div style={textStyle}>
         <h2>For {this.renderSelectedCategory(selectedCategory)} purchases</h2>
-        <h2>Use <span style={ cardNameStyles }>{bestCard.name}</span> For <span style={ cardNameStyles }>{bestCard.category[selectedCategory]}x</span> Reward Points!</h2>
+        <h2>Use <span style={ cardNameStyle }>{bestCard.name}</span> For <span style={ cardNameStyle }>{bestCard.category[selectedCategory]}x</span> Reward Points!</h2>
         <Image src={bestCard.image} thumbnail></Image>
-        <h2>Which is valued at <span style={ valueStyles }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
+        <h2>Which is valued at <span style={ valueStyle }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
       </div>
     );
   }
 }
 
 const styles = {
-  cardNameStyles: {
+  cardNameStyle: {
     color: '#004d99',
     fontSize: 30
   },
-  valueStyles: { 
+  valueStyle: { 
     color: 'green',
     fontSize: 30
+  },
+  textStyle: {
+    textShadow: '1px 1px 1px grey'
   }
 };
 

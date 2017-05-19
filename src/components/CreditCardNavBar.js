@@ -11,7 +11,7 @@ const CreditCardNavBar = (props) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect style={navBarStyle}>
+      <Navbar collapseOnSelect  style={navBarStyle}>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/dashboard">

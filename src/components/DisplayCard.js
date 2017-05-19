@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image } from 'react-bootstrap';
+import { Image, Jumbotron } from 'react-bootstrap';
 
 class DisplayCard extends Component {
   renderSelectedCategory(selectedCategory) {
@@ -40,17 +40,17 @@ class DisplayCard extends Component {
     const { bestCard } = this.props.bestCard;
     const { selectedCategory } = this.props.selectedCategory;
 
-    const { cardNameStyle, valueStyle, textStyle } = styles;
+    const { cardNameStyle, valueStyle, textStyle, jumbotronStyle } = styles;
 
-    if (!bestCard) return <div></div>;
+    if (!bestCard) return <div style={ {visibility: 'hidden'} }></div>
     
     return ( 
-      <div style={textStyle}>
+      <Jumbotron style={jumbotronStyle}>
         <h2>For {this.renderSelectedCategory(selectedCategory)} purchases</h2>
         <h2>Use <span style={ cardNameStyle }>{bestCard.name}</span> For <span style={ cardNameStyle }>{bestCard.category[selectedCategory]}x</span> Reward Points!</h2>
         <Image src={bestCard.image} thumbnail></Image>
         <h2>Which is valued at <span style={ valueStyle }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
-      </div>
+      </Jumbotron>
     );
   }
 }
@@ -65,7 +65,12 @@ const styles = {
     fontSize: 30
   },
   textStyle: {
-    textShadow: '1px 1px 1px grey'
+  },
+  jumbotronStyle: {
+    textShadow: '1px 1px 1px grey',
+    padding: 20,
+    marginTop: 30,
+    backgroundColor: 'white'
   }
 };
 

@@ -18,6 +18,7 @@ class CardsIndex extends Component {
         
         return (
             <div style={indexStyle}>
+                <CreditCardNavBar />
                 <PurchaseCategories />
                 <DisplayCard />
                 <Footer />
@@ -30,8 +31,7 @@ class CardsIndex extends Component {
 const styles = {
   indexStyle: {
     textAlign: 'center',
-    // backgroundImage: `url(${imgURL})`
-    backgroundColor: 'white'
+    backgroundColor: 'rgb(200,240,255)'
   }
 };
 

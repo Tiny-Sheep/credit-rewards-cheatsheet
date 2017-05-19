@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,19 +14,26 @@ const CreditCardNavBar = (props) => {
       <Navbar collapseOnSelect style={navBarStyle}>
         <Navbar.Header>
           <Navbar.Brand>
-            <h1>Welcome {name}</h1>
+            <Link to="/dashboard">
+              Creditcard Rewards
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
+        <Navbar.Collapse>
+          <Navbar.Text pullRight>
+            Cards List
+          </Navbar.Text>
+        </Navbar.Collapse>
       </Navbar>
-    {props.children}
     </div>
   )
 }
 
 const styles = {
   navBarStyle: {
-    backgroundColor: 'rgb(200,240,255)'
+    backgroundColor: 'rgb(200,240,255)',
+    boxShadow: '1px 1px 1px grey',
   }
 };
 

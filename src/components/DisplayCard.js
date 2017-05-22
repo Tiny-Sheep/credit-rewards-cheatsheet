@@ -6,33 +6,47 @@ class DisplayCard extends Component {
   renderSelectedCategory(selectedCategory) {
     switch(selectedCategory) {
       case 'amazon':
-        return 'Amazon'
+        'Amazon';
+        break;
       case 'dining':
-        return 'Dining'
+        'Dining';
+        break;
       case 'airfare':
-        return 'Airfare'
+        'Airfare';
+        break;
       case 'hotels':
-        return 'Hotel'
+        'Hotel';
+        break;
       case 'ground_transportation':
-        return 'Ground Transportation'
+        'Ground Transportation';
+        break;
       case 'gas':
-        return 'Gas'
+        'Gas';
+        break;
       case 'wholesale_clubs':
-        return 'Wholesale Club'
+        'Wholesale Club';
+        break;
       case 'groceries':
-        return 'Grocery Store'
+        'Grocery Store';
+        break;
       case 'department_stores':
-        return 'Department Store'
+        'Department Store';
+        break;
       case 'entertainment':
-        return 'Entertainment'
+        'Entertainment';
+        break;
       case 'home_improvement':
-        return 'Home Improvement'
+        'Home Improvement';
+        break;
       case 'drug_stores':
-        return 'Drug Store'
+        'Drug Store';
+        break;
       case 'miscellaneous':
-        return 'Miscellaneous'
+        'Miscellaneous';
+        break;
       default:
-        return ''
+        '';
+        break;
     }
   }
   
@@ -70,7 +84,7 @@ const styles = {
     textShadow: '1px 1px 1px grey',
     padding: 20,
     marginTop: 30,
-    backgroundColor: 'white'
+    backgroundColor: 'rgba(255,255,255,.6)'
   }
 };
 

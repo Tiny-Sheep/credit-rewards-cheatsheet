@@ -21,9 +21,6 @@ const CreditCardNavBar = (props) => {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Navbar.Text pullRight>
-            Cards List
-          </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>
     </div>

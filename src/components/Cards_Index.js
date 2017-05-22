@@ -15,7 +15,19 @@ class CardsIndex extends Component {
     
     render() {
         const { indexStyle } = styles;
-        
+        const { cards } = this.props;
+
+        if (!cards) {
+            return (
+                <div style={indexStyle}>
+                    <CreditCardNavBar />
+                    <PurchaseCategories />
+                    <div>Loading...Pleas Wait</div>
+                    <Footer />
+                </div>
+            )
+        }  
+
         return (
             <div style={indexStyle}>
                 <CreditCardNavBar />

@@ -5,6 +5,7 @@ import { fetchCards } from '../actions';
 import CreditCardNavBar from './CreditCardNavBar';
 import PurchaseCategories from './PurchaseCategories';
 import CreditCardsList from './CreditCardsList';
+import CardListSelection from './CardListSelection';
 import DisplayCard from './DisplayCard';
 import Footer from './Footer';
 
@@ -21,21 +22,24 @@ class CardsIndex extends Component {
             return (
                 <div style={indexStyle}>
                     <CreditCardNavBar />
+                    <CardListSelection />
                     <PurchaseCategories />
-                    <div>Loading...Pleas Wait</div>
+                    <div>Loading...Please Wait</div>
                     <Footer />
                 </div>
-            )
-        }  
+            );
+        } else {  
 
-        return (
-            <div style={indexStyle}>
-                <CreditCardNavBar />
-                <PurchaseCategories />
-                <DisplayCard />
-                <Footer />
-            </div>
-        );
+            return (
+                <div style={indexStyle}>
+                    <CreditCardNavBar />
+                    <CardListSelection />
+                    <PurchaseCategories />
+                    <DisplayCard />
+                    <Footer />
+                </div>
+            );
+        }
     }
 }
 

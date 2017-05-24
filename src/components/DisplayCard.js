@@ -3,50 +3,37 @@ import { connect } from 'react-redux';
 import { Image, Jumbotron } from 'react-bootstrap';
 
 class DisplayCard extends Component {
+  
   renderSelectedCategory(selectedCategory) {
     switch(selectedCategory) {
       case 'amazon':
-        'Amazon';
-        break;
+        return 'Amazon';
       case 'dining':
-        'Dining';
-        break;
+        return 'Dining';
       case 'airfare':
-        'Airfare';
-        break;
+        return 'Airfare';
       case 'hotels':
-        'Hotel';
-        break;
+        return 'Hotel';
       case 'ground_transportation':
-        'Ground Transportation';
-        break;
+        return 'Ground Transportation';
       case 'gas':
-        'Gas';
-        break;
+        return 'Gas';
       case 'wholesale_clubs':
-        'Wholesale Club';
-        break;
+        return 'Wholesale Club';
       case 'groceries':
-        'Grocery Store';
-        break;
+        return 'Grocery Store';
       case 'department_stores':
-        'Department Store';
-        break;
+        return 'Department Store';
       case 'entertainment':
-        'Entertainment';
-        break;
+        return 'Entertainment';
       case 'home_improvement':
-        'Home Improvement';
-        break;
+        return 'Home Improvement';
       case 'drug_stores':
-        'Drug Store';
-        break;
+        return 'Drug Store';
       case 'miscellaneous':
-        'Miscellaneous';
-        break;
+        return 'Miscellaneous';
       default:
-        '';
-        break;
+        return '';
     }
   }
   

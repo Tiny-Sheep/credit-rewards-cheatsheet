@@ -4,6 +4,7 @@ export const FETCH_CARDS = 'fetch_cards';
 export const SELECTED_CATEGORY = 'selected_category';
 export const BEST_CARD = 'best_card';
 export const FIND_BEST_CARD = 'find_best_card';
+export const ADD_USER_CARD = 'add_user_card';
 
 const ROOT_URL = 'https://credit-card-rewards-database.herokuapp.com/creditcards.json';
 
@@ -40,10 +41,16 @@ export function findBestCard(cards, category) {
     }
 }
 
-
 export function bestCard(card) {
     return {
         type: BEST_CARD,
+        payload: card
+    }
+}
+
+export function addUserCard(card) {
+    return {
+        type: ADD_USER_CARD,
         payload: card
     }
 }

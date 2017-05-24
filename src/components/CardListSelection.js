@@ -3,13 +3,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Grid, Row, Col, Thumbnail, Image, Button } from 'react-bootstrap';
 
-import CardThumbnails from './CardThumbnails';
+import * as actions from '../actions';
 
 class CardListSelection extends Component {
 
-    handleCardClick(event) {
-        console.log(event.target)
+    handleCardClick(event) {        
+        const cardsArr = _.values(this.props.cards)
+        const userCard = _.filter(cardsArr, card => {
+            if (card.image === event.target.getAttribute('src')) {
+                return card;
+            };
+        })
         
+        this.props.addUserCard(userCard);
     }
 
     renderThumbnails() {
@@ -18,7 +24,14 @@ class CardListSelection extends Component {
 
         const list = _.map(cards, card => (
             <Col key={card.name}  xs={6}>
-                <Image onClick={this.handleCardClick.bind(this)} style={cardStyle} src={card.image} thumbnail alt="small-card" />
+                <Image 
+                    onClick={this.handleCardClick.bind(this)} 
+                    style={cardStyle} 
+                    src={card.image} 
+                    thumbnail 
+                    alt="small-card" 
+                />
+                <p>{card.name}</p>
             </Col>
             )
         );
@@ -59,4 +72,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(CardListSelection);
+export default connect(mapStateToProps, actions)(CardListSelection);

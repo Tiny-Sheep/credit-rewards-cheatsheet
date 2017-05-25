@@ -21,7 +21,6 @@ class PurchaseCategories extends Component {
     const { jumbotronStyle, containerStyle, textStyle, groupBoxStyle } = styles;
     const { cards, userCards } = this.props;
 
-    console.log('cards:',cards, 'userCards:', userCards);
     if (userCards.length < 1) {
       return (
         <div>

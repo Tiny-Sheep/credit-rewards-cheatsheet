@@ -1,10 +1,13 @@
 import _ from 'lodash';
 import axios from 'axios';
-export const FETCH_CARDS = 'fetch_cards';
-export const SELECTED_CATEGORY = 'selected_category';
-export const BEST_CARD = 'best_card';
-export const FIND_BEST_CARD = 'find_best_card';
-export const ADD_USER_CARD = 'add_user_card';
+import {
+    FETCH_CARDS,
+    SELECTED_CATEGORY,
+    FIND_BEST_CARD,
+    BEST_CARD,
+    ADD_USER_CARD,
+    REMOVE_USER_CARD
+} from './types';
 
 const ROOT_URL = 'https://credit-card-rewards-database.herokuapp.com/creditcards.json';
 
@@ -51,6 +54,13 @@ export function bestCard(card) {
 export function addUserCard(card) {
     return {
         type: ADD_USER_CARD,
+        payload: card
+    }
+}
+
+export function removeUserCard(card) {
+    return {
+        type: REMOVE_USER_CARD,
         payload: card
     }
 }

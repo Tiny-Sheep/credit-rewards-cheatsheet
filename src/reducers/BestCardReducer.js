@@ -1,4 +1,4 @@
-import { FIND_BEST_CARD } from '../actions';
+import { FIND_BEST_CARD } from '../actions/types';
 
 export default function(state = {}, action) {
     switch (action.type) {

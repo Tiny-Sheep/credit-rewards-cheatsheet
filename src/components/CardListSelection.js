@@ -8,14 +8,19 @@ import * as actions from '../actions';
 class CardListSelection extends Component {
 
     handleCardClick(event) {        
-        const cardsArr = _.values(this.props.cards)
-        const userCard = _.filter(cardsArr, card => {
+        const { userCards, cards } = this.props;
+        const cardsArr = _.values(cards)
+        const selectedCard = _.filter(cardsArr, card => {
             if (card.image === event.target.getAttribute('src')) {
                 return card;
             };
         })
-
-        this.props.addUserCard(userCard[0]);
+        const cardDuplicate = _.find(userCards, card => {
+            return card._id === selectedCard[0]._id
+        })
+        if (!cardDuplicate) {
+            this.props.addUserCard(selectedCard[0], userCards);
+        }
     }
 
     renderThumbnails() {
@@ -70,7 +75,8 @@ const styles = {
 
 function mapStateToProps(state) {
     return {
-        cards: state.cards
+        cards: state.cards,
+        userCards: state.userCards
     }
 }
 

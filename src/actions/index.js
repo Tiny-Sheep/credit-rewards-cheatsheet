@@ -51,7 +51,8 @@ export function bestCard(card) {
     }
 }
 
-export function addUserCard(card) {
+export function addUserCard(card, userCards) {
+    
     return {
         type: ADD_USER_CARD,
         payload: card

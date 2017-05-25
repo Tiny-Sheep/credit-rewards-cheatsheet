@@ -4,9 +4,14 @@ import { connect } from 'react-redux';
 import { Col, Grid, Row, Clearfix, Image, Button, Thumbnail } from 'react-bootstrap';
 
 class UserCardsDisplay extends Component {
-    
+    constructor(props) {
+        super(props);
+
+        this.handleRemoveUserCard = this.handleRemoveUserCard.bind(this);
+    }
+
     handleRemoveUserCard(card) {
-        
+        console.log(card)
     }
 
     renderCards() {
@@ -28,7 +33,11 @@ class UserCardsDisplay extends Component {
                         thumbnail
                     />
                     <p style={textStyle}>{card.name}</p>
-                    <Button bsSize="xsmall" bsStyle="danger" onClick={this.handleRemoveUserCard(card)}>X</Button>
+                    <Button 
+                        bsSize="xsmall" 
+                        bsStyle="danger" 
+                        onClick={() => this.handleRemoveUserCard(card)}
+                    >X</Button>
                 </div>
                 </Clearfix>
             </Col>

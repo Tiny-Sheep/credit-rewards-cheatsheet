@@ -3,7 +3,7 @@ import { Button, Jumbotron } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-const GettingStarted = () => {
+const LandingPage = () => {
   const { jumbotronStyle, bodyStyle, linkContainerStyle } = styles;
   
   return (
@@ -47,4 +47,4 @@ const styles = {
   }
 };
 
-export default GettingStarted;
+export default LandingPage;

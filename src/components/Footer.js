@@ -5,18 +5,20 @@ const Footer = () => {
   const { jumbotronStyle, linkColorStyle } = styles; 
 
   return (
-    <Jumbotron style={ jumbotronStyle }>
+    <footer style={ jumbotronStyle }>
       <h5><a style={linkColorStyle} href="http://krystneto.github.io/portfolio/">About</a></h5>
       <h5>Email: <a style={ linkColorStyle } href="mailto:kkparchen@gmail.com">kkparchen@gmail.com</a></h5>
       <h5>©Kristopher Parchen</h5>
-    </Jumbotron>
+    </footer>
   );
 };
 
 const styles = {
   jumbotronStyle: {
     backgroundColor: 'gray',
-    color: 'white'
+    color: 'white',
+    height: 200,
+    padding: 50
   },
   linkColorStyle: {
     color: 'turquoise'

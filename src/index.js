@@ -9,9 +9,9 @@ import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
-import CardsIndex from './components/Cards_Index';
+import CardsIndex from './components/routes/Cards_Index';
 import CreditCardsList from './components/CreditCardsList';
-import GetttingStarted from './components/GettingStarted';
+import LandingPage from './components/routes/Landing_Page';
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
@@ -19,7 +19,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/cards" component={CreditCardsList} />
         <Route path="/dashboard" component={CardsIndex} />
-        <Route path="/" component={GetttingStarted} />
+        <Route path="/" component={LandingPage} />
       </Switch>
     </BrowserRouter>
   </Provider>,

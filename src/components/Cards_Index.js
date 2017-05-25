@@ -5,6 +5,7 @@ import { fetchCards } from '../actions';
 import CreditCardNavBar from './CreditCardNavBar';
 import PurchaseCategories from './PurchaseCategories';
 import CreditCardsList from './CreditCardsList';
+import UserCardsDisplay from './UserCardsDisplay';
 import CardListSelection from './CardListSelection';
 import DisplayCard from './DisplayCard';
 import Footer from './Footer';
@@ -34,6 +35,7 @@ class CardsIndex extends Component {
                 <div style={indexStyle}>
                     <CreditCardNavBar />
                     <CardListSelection />
+                    <UserCardsDisplay />
                     <PurchaseCategories />
                     <DisplayCard />
                     <Footer />

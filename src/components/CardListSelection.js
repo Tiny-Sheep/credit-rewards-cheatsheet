@@ -14,8 +14,8 @@ class CardListSelection extends Component {
                 return card;
             };
         })
-        
-        this.props.addUserCard(userCard);
+
+        this.props.addUserCard(userCard[0]);
     }
 
     renderThumbnails() {
@@ -57,7 +57,7 @@ class CardListSelection extends Component {
 
 const styles = {
     cardStyle: {
-        margin: '5'
+        margin: 5
     },
     textStyle: {
         textShadow: '2px 2px 3px black',

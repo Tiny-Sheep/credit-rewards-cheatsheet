@@ -19,35 +19,66 @@ class PurchaseCategories extends Component {
   
   render() {
     const { jumbotronStyle, containerStyle, textStyle, groupBoxStyle } = styles;
-    const { cards } = this.props;
+    const { cards, userCards } = this.props;
 
-    return (
-      <div>
-        <h2 style={textStyle}>Select Your Purchase Category</h2>
-        <div style={containerStyle}>
-          <ButtonGroup style={groupBoxStyle} block vertical bsSize="large">
-            <Button onClick={ () => this.selectCategory('dining', cards) }><span className="fa fa-cutlery"> Dining</span></Button>
-            <Button onClick={ () => this.selectCategory('airfare', cards) }><span className="fa fa-plane"> Airfare</span></Button>
-            <Button onClick={ () => this.selectCategory('hotels', cards) }><span className="fa fa-hotel"> Hotels</span></Button>
-      
-            <Button onClick={ () => this.selectCategory('ground_transportation', cards) }><span className="fa fa-train"> Ground Transportation</span></Button>            
-            <Button onClick={ () => this.selectCategory('gas', cards) }><span className="fa fa-car"> Gas</span></Button>          
+    console.log('cards:',cards, 'userCards:', userCards);
+    if (userCards.length < 1) {
+      return (
+        <div>
+          <h2 style={textStyle}>Select Your Purchase Category</h2>
+          <div style={containerStyle}>
+            <ButtonGroup style={groupBoxStyle} block vertical bsSize="large">
+              <Button onClick={ () => this.selectCategory('dining', cards) }><span className="fa fa-cutlery"> Dining</span></Button>
+              <Button onClick={ () => this.selectCategory('airfare', cards) }><span className="fa fa-plane"> Airfare</span></Button>
+              <Button onClick={ () => this.selectCategory('hotels', cards) }><span className="fa fa-hotel"> Hotels</span></Button>
+        
+              <Button onClick={ () => this.selectCategory('ground_transportation', cards) }><span className="fa fa-train"> Ground Transportation</span></Button>            
+              <Button onClick={ () => this.selectCategory('gas', cards) }><span className="fa fa-car"> Gas</span></Button>          
 
-            <Button onClick={ () => this.selectCategory('amazon', cards) }><span className="fa fa-amazon"> Amazon</span></Button>
-            <Button onClick={ () => this.selectCategory('wholesale_clubs', cards) }><span className="fa fa-gift"> Wholesale Clubs</span></Button>      
+              <Button onClick={ () => this.selectCategory('amazon', cards) }><span className="fa fa-amazon"> Amazon</span></Button>
+              <Button onClick={ () => this.selectCategory('wholesale_clubs', cards) }><span className="fa fa-gift"> Wholesale Clubs</span></Button>      
 
-            <Button onClick={ () => this.selectCategory('groceries', cards) }><span className="fa fa-shopping-cart"> Groceries</span></Button>
-            <Button onClick={ () => this.selectCategory('department_stores', cards) }><span className="fa fa-shopping-bag"> Department Stores</span></Button>
+              <Button onClick={ () => this.selectCategory('groceries', cards) }><span className="fa fa-shopping-cart"> Groceries</span></Button>
+              <Button onClick={ () => this.selectCategory('department_stores', cards) }><span className="fa fa-shopping-bag"> Department Stores</span></Button>
 
-            <Button onClick={ () => this.selectCategory('entertainment', cards) }><span className="fa fa-film"> Entertainment</span></Button>            
-            <Button onClick={ () => this.selectCategory('drug_stores', cards) }><span className="fa fa-medkit"> Drug Stores</span></Button>
+              <Button onClick={ () => this.selectCategory('entertainment', cards) }><span className="fa fa-film"> Entertainment</span></Button>            
+              <Button onClick={ () => this.selectCategory('drug_stores', cards) }><span className="fa fa-medkit"> Drug Stores</span></Button>
 
-            <Button onClick={ () => this.selectCategory('home_improvement', cards) }><span className="fa fa-home"> Home Improvement</span></Button>          
-            <Button onClick={ () => this.selectCategory('miscellaneous', cards) }><span className="fa fa-coffee"> Misc.</span></Button>            
-          </ButtonGroup>
+              <Button onClick={ () => this.selectCategory('home_improvement', cards) }><span className="fa fa-home"> Home Improvement</span></Button>          
+              <Button onClick={ () => this.selectCategory('miscellaneous', cards) }><span className="fa fa-coffee"> Misc.</span></Button>            
+            </ButtonGroup>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <h2 style={textStyle}>Select Your Purchase Category</h2>
+          <div style={containerStyle}>
+            <ButtonGroup style={groupBoxStyle} block vertical bsSize="large">
+              <Button onClick={ () => this.selectCategory('dining', userCards) }><span className="fa fa-cutlery"> Dining</span></Button>
+              <Button onClick={ () => this.selectCategory('airfare', userCards) }><span className="fa fa-plane"> Airfare</span></Button>
+              <Button onClick={ () => this.selectCategory('hotels', userCards) }><span className="fa fa-hotel"> Hotels</span></Button>
+        
+              <Button onClick={ () => this.selectCategory('ground_transportation', userCards) }><span className="fa fa-train"> Ground Transportation</span></Button>            
+              <Button onClick={ () => this.selectCategory('gas', userCards) }><span className="fa fa-car"> Gas</span></Button>          
+
+              <Button onClick={ () => this.selectCategory('amazon', userCards) }><span className="fa fa-amazon"> Amazon</span></Button>
+              <Button onClick={ () => this.selectCategory('wholesale_clubs', userCards) }><span className="fa fa-gift"> Wholesale Clubs</span></Button>      
+
+              <Button onClick={ () => this.selectCategory('groceries', userCards) }><span className="fa fa-shopping-cart"> Groceries</span></Button>
+              <Button onClick={ () => this.selectCategory('department_stores', userCards) }><span className="fa fa-shopping-bag"> Department Stores</span></Button>
+
+              <Button onClick={ () => this.selectCategory('entertainment', userCards) }><span className="fa fa-film"> Entertainment</span></Button>            
+              <Button onClick={ () => this.selectCategory('drug_stores', userCards) }><span className="fa fa-medkit"> Drug Stores</span></Button>
+
+              <Button onClick={ () => this.selectCategory('home_improvement', userCards) }><span className="fa fa-home"> Home Improvement</span></Button>          
+              <Button onClick={ () => this.selectCategory('miscellaneous', userCards) }><span className="fa fa-coffee"> Misc.</span></Button>            
+            </ButtonGroup>
+          </div>
+        </div>
+      );
+    }
   }
 };
 
@@ -68,7 +99,8 @@ const styles = {
 
 function mapStateToProps(state) {
   return {
-    cards: state.cards
+    cards: state.cards,
+    userCards: state.userCards
   }
 }
 

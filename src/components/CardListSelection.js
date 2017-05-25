@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Col, Thumbnail, Image, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Thumbnail, Image, Button, Clearfix } from 'react-bootstrap';
 
 import * as actions from '../actions';
 
@@ -23,15 +23,17 @@ class CardListSelection extends Component {
         const { cardStyle } = styles;
 
         const list = _.map(cards, card => (
-            <Col key={card.name}  xs={6}>
-                <Image 
-                    onClick={this.handleCardClick.bind(this)} 
-                    style={cardStyle} 
-                    src={card.image} 
-                    thumbnail 
-                    alt="small-card" 
-                />
+            <Col key={card.name} xs={6} sm={2}>
+                <Clearfix visibleXsBlock visibleSmBlock visibleMdBlock visibleLgBlock>
+                    <Image 
+                        onClick={this.handleCardClick.bind(this)} 
+                        style={cardStyle} 
+                        src={card.image} 
+                        thumbnail 
+                        alt="small-card" 
+                    />
                 <p>{card.name}</p>
+                </Clearfix>
             </Col>
             )
         );
@@ -45,7 +47,7 @@ class CardListSelection extends Component {
         return (
             <div style={textStyle}>
                 <h2 style={textStyle}>Select Your Cards</h2>
-                <Grid>
+                <Grid fluid>
                     <Row>
                         {this.renderThumbnails()}
                     </Row>

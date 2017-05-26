@@ -88,7 +88,7 @@ class UserCardsDisplay extends Component {
 
 const styles = {
     textStyle: {
-        textShadow: '2px 2px 3px black',
+        textShadow: '1px 1px 2px black',
         color: 'white'
     },
     cardStyle: {

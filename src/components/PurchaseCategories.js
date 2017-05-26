@@ -61,7 +61,7 @@ const styles = {
     margin: '30px auto'
   },
   textStyle: {
-    textShadow: '2px 2px 3px black',
+    textShadow: '1px 1px 2px black',
     color: 'white',
     margin: 20
   }

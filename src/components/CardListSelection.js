@@ -86,7 +86,7 @@ const styles = {
         margin: 5
     },
     textStyle: {
-        textShadow: '2px 2px 3px black',
+        textShadow: '1px 1px 2px black',
         color: 'white',
         textAlign: 'center'
     }

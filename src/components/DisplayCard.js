@@ -50,7 +50,7 @@ class DisplayCard extends Component {
         <h2>For {this.renderSelectedCategory(selectedCategory)} purchases</h2>
         <h2>Use <span style={ cardNameStyle }>{bestCard.name}</span> For <span style={ cardNameStyle }>{bestCard.category[selectedCategory]}x</span> Reward Points!</h2>
         <Image src={bestCard.image} thumbnail></Image>
-        <h2>Which is valued at <span style={ valueStyle }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
+        <h2>Valued at <span style={ valueStyle }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
       </Jumbotron>
     );
   }

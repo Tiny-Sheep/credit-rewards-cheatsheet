@@ -21,17 +21,10 @@ class PurchaseCategories extends Component {
     const { jumbotronStyle, containerStyle, textStyle, groupBoxStyle } = styles;
     const { cards, userCards } = this.props;
 
-    if (userCards.length < 1) { 
-      return (
-        <div>
-          <h2>Please Select Your Cards</h2>
-        </div>
-      );
-    };
-
     return (
-      <div>
-        <h2 style={textStyle}>Select Your Purchase Category</h2>
+      <div style={textStyle}>
+        <h1>Step 2:</h1>
+        <h2>Select Your Purchase Category</h2>
         <div style={containerStyle}>
           <ButtonGroup style={groupBoxStyle} block vertical bsSize="large">
             <Button onClick={ () => this.selectCategory('dining', userCards) }><span className="fa fa-cutlery"> Dining</span></Button>

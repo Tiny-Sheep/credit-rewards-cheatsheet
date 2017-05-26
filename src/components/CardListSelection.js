@@ -1,23 +1,36 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Col, Thumbnail, Image, Button, Clearfix } from 'react-bootstrap';
+import { 
+    Grid, 
+    Row, 
+    Col, 
+    Thumbnail, 
+    Image, 
+    Button, 
+    Clearfix 
+} from 'react-bootstrap';
 
 import * as actions from '../actions';
+
 
 class CardListSelection extends Component {
 
     handleCardClick(event) {        
         const { userCards, cards } = this.props;
+        
         const cardsArr = _.values(cards)
+        
         const selectedCard = _.filter(cardsArr, card => {
             if (card.image === event.target.getAttribute('src')) {
                 return card;
             };
         })
+
         const cardDuplicate = _.find(userCards, card => {
             return card._id === selectedCard[0]._id
         })
+
         if (!cardDuplicate) {
             this.props.addUserCard(selectedCard[0], userCards);
         }
@@ -29,7 +42,12 @@ class CardListSelection extends Component {
 
         const list = _.map(cards, card => (
             <Col key={card.name} xs={6} sm={2}>
-                <Clearfix visibleXsBlock visibleSmBlock visibleMdBlock visibleLgBlock>
+                <Clearfix 
+                    visibleXsBlock 
+                    visibleSmBlock 
+                    visibleMdBlock 
+                    visibleLgBlock
+                >
                     <Image 
                         onClick={this.handleCardClick.bind(this)} 
                         style={cardStyle} 
@@ -51,7 +69,8 @@ class CardListSelection extends Component {
 
         return (
             <div style={textStyle}>
-                <h2 style={textStyle}>Select Your Cards</h2>
+                <h1>Step 1:</h1>
+                <h2>Select Your Cards</h2>
                 <Grid fluid>
                     <Row>
                         {this.renderThumbnails()}

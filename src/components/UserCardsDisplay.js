@@ -1,7 +1,14 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Col, Grid, Row, Clearfix, Image, Button, Thumbnail } from 'react-bootstrap';
+import { 
+    Col, 
+    Grid, 
+    Row, 
+    Clearfix, 
+    Image, 
+    Button
+} from 'react-bootstrap';
 
 class UserCardsDisplay extends Component {
     constructor(props) {
@@ -11,16 +18,24 @@ class UserCardsDisplay extends Component {
     }
 
     handleRemoveUserCard(card) {
-        console.log(card)
+        const { userCards } = this.props;
+        
+        const removedCard = _.remove(userCards, userCard => {
+            if (card.name === userCard.name) {
+                return card
+            }
+        })
+
+        this.setState({
+            userCards
+        });
+
+        console.log(userCards)
     }
 
     renderCards() {
         const { userCards } =  this.props;
         const { cardStyle, textStyle, cardContainerStyle } = styles;
-
-        if (userCards.length < 1) {
-            return <div></div>;
-        }
 
         const cardList = userCards.map(card => (
             <Col key={card.name} xs={6} sm={2}>
@@ -48,10 +63,19 @@ class UserCardsDisplay extends Component {
     
     render() {
         const { textStyle } = styles;
+        const { userCards } = this.props;
+
+        if (userCards.length < 1) {
+            return (
+                <div style={textStyle}>
+                    <h2>Your Card List Is Empty</h2>
+                </div>
+            );   
+        }
 
         return (
             <div className="user-cards-display">
-                <h2 style={textStyle}>Your Cards</h2>
+                <h2 style={textStyle}>Your Card List</h2>
                 <Grid fluid>
                     <Row>
                         {this.renderCards()}

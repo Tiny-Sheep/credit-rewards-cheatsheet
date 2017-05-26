@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchCards } from '../../actions';
 
 import CreditCardNavBar from '../CreditCardNavBar';
+import GettingStarted from '../GettingStarted';
 import PurchaseCategories from '../PurchaseCategories';
 import CreditCardsList from '../CreditCardsList';
 import UserCardsDisplay from '../UserCardsDisplay';
@@ -23,6 +24,7 @@ class CardsIndex extends Component {
             return (
                 <div style={indexStyle}>
                     <CreditCardNavBar />
+                    <GettingStarted />
                     <CardListSelection />
                     <PurchaseCategories />
                     <div>Loading...Please Wait</div>
@@ -34,6 +36,7 @@ class CardsIndex extends Component {
             return (
                 <div style={indexStyle}>
                     <CreditCardNavBar />
+                    <GettingStarted />
                     <CardListSelection />
                     <UserCardsDisplay />
                     <PurchaseCategories />

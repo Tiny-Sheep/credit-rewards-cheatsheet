@@ -10,7 +10,7 @@ class CreditCardsList extends Component {
   render() {
     const { cards } = this.props;
     const { jumbotronStyle } = styles;    
-    
+
     if (!cards) {
       return <div>Loading...</div>;
     }

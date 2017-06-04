@@ -9,10 +9,10 @@ import {
     REMOVE_USER_CARD
 } from './types';
 
-const ROOT_URL = 'https://credit-card-rewards-database.herokuapp.com/creditcards.json';
+const ROOT_URL = 'https://credit-card-rewards-database.herokuapp.com';
 
 export function fetchCards() {
-    const request = axios.get(ROOT_URL)
+    const request = axios.get(`${ROOT_URL}/api/cards`);
     
     return {
         type: FETCH_CARDS,

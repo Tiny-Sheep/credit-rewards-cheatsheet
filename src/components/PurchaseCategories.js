@@ -31,7 +31,7 @@ class PurchaseCategories extends Component {
             <Button onClick={ () => this.selectCategory('airfare', userCards) }><span className="fa fa-plane"> Airfare</span></Button>
             <Button onClick={ () => this.selectCategory('hotels', userCards) }><span className="fa fa-hotel"> Hotels</span></Button>
       
-            <Button onClick={ () => this.selectCategory('ground_transportation', userCards) }><span className="fa fa-train"> Ground Transportation</span></Button>            
+            <Button onClick={ () => this.selectCategory('ground_transportation', userCards) }><span className="fa fa-train"> Ground Trans.</span></Button>            
             <Button onClick={ () => this.selectCategory('gas', userCards) }><span className="fa fa-car"> Gas</span></Button>          
 
             <Button onClick={ () => this.selectCategory('amazon', userCards) }><span className="fa fa-amazon"> Amazon</span></Button>

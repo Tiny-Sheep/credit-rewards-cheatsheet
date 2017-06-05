@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
@@ -11,16 +11,23 @@ const CreditCardNavBar = (props) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect  style={navBarStyle}>
+      <Navbar collapseOnSelect style={navBarStyle}>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/dashboard">
-              Creditcard Rewards
+              Credit Rewards Cheatsheet
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem >
+              <Link to="/cards">
+                Credit Cards
+              </Link>
+            </NavItem>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>

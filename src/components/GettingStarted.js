@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
 const GettingStarted = () => (
-    <Carousel controls="false">
+    <Carousel controls={false}>
         <Carousel.Item>
             <img width={1300} height={400} alt="900x500" src='http://i.imgur.com/v8hLYHu.jpg'/>
             <Carousel.Caption>

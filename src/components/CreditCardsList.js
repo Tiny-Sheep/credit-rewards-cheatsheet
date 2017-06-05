@@ -14,7 +14,7 @@ class CreditCardsList extends Component {
     if (!cards) {
       return <div>Loading...</div>;
     }
-    
+    console.log(cards)
     return (
       <div>
         <Jumbotron style={jumbotronStyle}>

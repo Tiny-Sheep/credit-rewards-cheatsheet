@@ -10,6 +10,8 @@ import {
     Button
 } from 'react-bootstrap';
 
+import * as actions from '../actions';
+
 class UserCardsDisplay extends Component {
     constructor(props) {
         super(props);
@@ -24,13 +26,10 @@ class UserCardsDisplay extends Component {
             if (card.name === userCard.name) {
                 return card
             }
-        })
-
-        this.setState({
-            userCards
         });
+        
+        this.props.removeUserCard(userCards);
 
-        console.log(userCards)
     }
 
     renderCards() {
@@ -50,7 +49,7 @@ class UserCardsDisplay extends Component {
                     <p style={textStyle}>{card.name}</p>
                     <Button 
                         bsSize="xsmall" 
-                        bsStyle="danger" 
+                        bsStyle="danger"
                         onClick={() => this.handleRemoveUserCard(card)}
                     >X</Button>
                 </div>
@@ -106,4 +105,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(UserCardsDisplay);
+export default connect(mapStateToProps, actions)(UserCardsDisplay);

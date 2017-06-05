@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCards } from '../../actions';
+import * as actions from '../../actions';
 
 import CreditCardNavBar from '../CreditCardNavBar';
 import GettingStarted from '../GettingStarted';
@@ -61,4 +61,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { fetchCards })(CardsIndex);
+export default connect(mapStateToProps, actions)(CardsIndex);

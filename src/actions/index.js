@@ -18,14 +18,14 @@ export function fetchCards() {
         type: FETCH_CARDS,
         payload: request
     };    
-}
+};
 
 export function selectedCategory(category) {
     return {
         type: SELECTED_CATEGORY,
         payload: category
-    }
-}
+    };
+};
 
 export function findBestCard(cards, category) {
     let max = 0;
@@ -35,14 +35,14 @@ export function findBestCard(cards, category) {
       if ( (card.category[category] * card.valuedEarning) > max ) {
         max = card.category[category] * card.valuedEarning;
         bestCard = card;
-      }
-    })
+      };
+    });
 
     return {
         type: FIND_BEST_CARD,
         payload: bestCard
-    }
-}
+    };
+};
 
 export function bestCard(card) {
     return {
@@ -51,17 +51,34 @@ export function bestCard(card) {
     }
 }
 
-export function addUserCard(card, userCards) {
-    
+export function addUserCard(event, userCards, cards) {
+        
+    const cardsArr = _.values(cards);
+    let card = null;
+
+    const selectedCard = _.filter(cardsArr, card => {
+        if (card.image === event.target.getAttribute('src')) {
+            return card;
+        };
+    });
+
+    const cardDuplicate = _.find(userCards, card => {
+        return card._id === selectedCard[0]._id
+    });
+
+    if (!cardDuplicate) {
+        card = selectedCard[0];
+    };
+
     return {
         type: ADD_USER_CARD,
         payload: card
-    }
-}
+    };
+};
 
-export function removeUserCard(card) {
+export function removeUserCard(userCards) {
     return {
         type: REMOVE_USER_CARD,
-        payload: card
-    }
-}
+        payload: userCards
+    };
+};

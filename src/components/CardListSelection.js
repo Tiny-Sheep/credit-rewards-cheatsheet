@@ -15,7 +15,6 @@ import * as actions from '../actions';
 
 
 class CardListSelection extends Component {
-
     handleCardClick(event) {        
         const { userCards, cards } = this.props;
         
@@ -67,6 +66,8 @@ class CardListSelection extends Component {
         const { cards } = this.props;
         const { textStyle } = styles;
 
+        if (!cards) { return <div>Please wait...loading</div>; }
+        
         return (
             <div style={textStyle}>
                 <h1>Step 1:</h1>

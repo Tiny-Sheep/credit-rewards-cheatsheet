@@ -20,18 +20,17 @@ class CardsIndex extends Component {
         const { indexStyle } = styles;
         const { cards } = this.props;
 
-        if (!cards) {
-            return (
-                <div style={indexStyle}>
-                    <CreditCardNavBar />
-                    <GettingStarted />
-                    <CardListSelection />
-                    <PurchaseCategories />
-                    <div>Loading...Please Wait</div>
-                    <Footer />
-                </div>
-            );
-        } else {  
+        // if (!cards) {
+        //     return (
+        //         <div style={indexStyle}>
+        //             <CreditCardNavBar />
+        //             <GettingStarted />
+        //             <CardListSelection />
+        //             <PurchaseCategories />
+        //             <Footer />
+        //         </div>
+        //     );
+        // } else {  
 
             return (
                 <div style={indexStyle}>
@@ -44,7 +43,6 @@ class CardsIndex extends Component {
                     <Footer />
                 </div>
             );
-        }
     }
 }
 

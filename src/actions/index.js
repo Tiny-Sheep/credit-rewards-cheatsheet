@@ -54,7 +54,6 @@ export function bestCard(card) {
 export function addUserCard(event, userCards, cards) {
         
     const cardsArr = _.values(cards);
-    let card = null;
 
     const selectedCard = _.filter(cardsArr, card => {
         if (card.image === event.target.getAttribute('src')) {
@@ -65,9 +64,17 @@ export function addUserCard(event, userCards, cards) {
     const cardDuplicate = _.find(userCards, card => {
         return card._id === selectedCard[0]._id
     });
+    console.log(selectedCard);
+    console.log(cardDuplicate);
 
-    if (!cardDuplicate) {
-        card = selectedCard[0];
+    let card = selectedCard[0];
+
+    if (cardDuplicate) {
+        const removeDuplicate = _.remove(userCards, userCard => {
+            if (cardDuplicate.name === userCard.name) {
+                return card
+            } 
+        })
     };
 
     return {
@@ -76,7 +83,15 @@ export function addUserCard(event, userCards, cards) {
     };
 };
 
-export function removeUserCard(userCards) {
+export function removeUserCard(card, userCards) {
+    
+    const removedCard = _.remove(userCards, userCard => {
+    
+    if (card.name === userCard.name) {
+            return card
+        }
+    });
+    
     return {
         type: REMOVE_USER_CARD,
         payload: userCards

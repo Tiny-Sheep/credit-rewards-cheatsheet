@@ -10,7 +10,7 @@ import reducers from './reducers';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 import CardsIndex from './components/routes/Cards_Index';
-import CreditCardsList from './components/CreditCardsList';
+import CreditCardsList from './components/routes/CreditCardsList';
 import LandingPage from './components/routes/Landing_Page';
 
 ReactDOM.render(

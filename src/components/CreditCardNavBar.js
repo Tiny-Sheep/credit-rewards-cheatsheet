@@ -2,6 +2,7 @@
 import React from 'react';
 import { Navbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 
@@ -22,16 +23,16 @@ const CreditCardNavBar = (props) => {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem >
-              <Link to="/cards">
+            <LinkContainer to="/cards">
+              <NavItem >
                 Credit Cards
-              </Link>
-            </NavItem>
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>
-  )
+  );
 }
 
 const styles = {

@@ -5,7 +5,6 @@ import * as actions from '../../actions';
 import CreditCardNavBar from '../CreditCardNavBar';
 import GettingStarted from '../GettingStarted';
 import PurchaseCategories from '../PurchaseCategories';
-import CreditCardsList from '../CreditCardsList';
 import UserCardsDisplay from '../UserCardsDisplay';
 import CardListSelection from '../CardListSelection';
 import DisplayCard from '../DisplayCard';
@@ -19,18 +18,6 @@ class CardsIndex extends Component {
     render() {
         const { indexStyle } = styles;
         const { cards } = this.props;
-
-        // if (!cards) {
-        //     return (
-        //         <div style={indexStyle}>
-        //             <CreditCardNavBar />
-        //             <GettingStarted />
-        //             <CardListSelection />
-        //             <PurchaseCategories />
-        //             <Footer />
-        //         </div>
-        //     );
-        // } else {  
 
             return (
                 <div style={indexStyle}>

@@ -22,14 +22,7 @@ class UserCardsDisplay extends Component {
     handleRemoveUserCard(card) {
         const { userCards } = this.props;
         
-        const removedCard = _.remove(userCards, userCard => {
-            if (card.name === userCard.name) {
-                return card
-            }
-        });
-        
-        this.props.removeUserCard(userCards);
-
+        this.props.removeUserCard(card, userCards);
     }
 
     renderCards() {

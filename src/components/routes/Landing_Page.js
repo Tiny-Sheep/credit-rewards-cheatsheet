@@ -12,7 +12,7 @@ const LandingPage = () => {
         <h1>The Credit Rewards Cheatsheet</h1>
         <h3>Know which credit card to use for all your purchases!</h3>
         <br />
-        <LinkContainer style={linkContainerStyle}to="/dashboard">
+        <LinkContainer style={linkContainerStyle} to="/dashboard">
           <Button bsStyle="info">Get Started</Button>
         </LinkContainer>
       </Jumbotron>

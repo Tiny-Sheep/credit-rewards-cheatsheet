@@ -6,7 +6,6 @@ import { Panel, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 class CreditCardsList extends Component {
   
-  
   render() {
     const { cards } = this.props;
     const { jumbotronStyle } = styles;    

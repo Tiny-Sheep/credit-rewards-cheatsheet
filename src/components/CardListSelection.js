@@ -17,8 +17,8 @@ import * as actions from '../actions';
 class CardListSelection extends Component {
     handleCardClick(event) {        
         const { userCards, cards } = this.props;
-
         this.props.addUserCard(event, userCards, cards);
+
     }
 
     renderThumbnails() {

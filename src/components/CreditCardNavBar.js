@@ -8,7 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const CreditCardNavBar = (props) => {
   const { name } = props;
-  const { navBarStyle } = styles;
+  const { navBarStyle, textBrandStyle, navItemStyle } = styles;
 
   return (
     <div>
@@ -16,7 +16,7 @@ const CreditCardNavBar = (props) => {
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/dashboard">
-              Credit Rewards Cheatsheet
+              <p style={textBrandStyle}>Credit Rewards Cheatsheet</p>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -25,20 +25,30 @@ const CreditCardNavBar = (props) => {
           <Nav pullRight>
             <LinkContainer to="/cards">
               <NavItem >
-                Credit Cards
+                <p style={navItemStyle}>Credit Cards</p>
               </NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>
-  );
+  );  
 }
 
 const styles = {
   navBarStyle: {
     backgroundColor: 'rgb(200,240,255)',
     boxShadow: '1px 1px 1px grey',
+  },
+  textBrandStyle: {
+    color: 'white',
+    textShadow: '1px 1px 1px grey',
+    fontSize: 24
+  },
+  navItemStyle: {
+    color: 'white',
+    textShadow: '1px 1px 1px grey',
+    fontSize: 16
   }
 };
 

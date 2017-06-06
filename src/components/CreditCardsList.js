@@ -13,9 +13,9 @@ class CreditCardsList extends Component {
     if (!cards) {
       return <div>Loading...</div>;
     }
-    console.log(cards)
+
     return (
-      <div>
+      <div className="credit-card-list">
         <Jumbotron style={jumbotronStyle}>
           <h2>List of Credit Cards</h2>
           { _.map(cards, card => {

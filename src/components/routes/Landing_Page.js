@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Button, Jumbotron } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import * as actions from '../../actions';
 
-
-const LandingPage = () => {
-  const { jumbotronStyle, bodyStyle, linkContainerStyle } = styles;
-  
-  return (
-    <div style={bodyStyle}>
-      <Jumbotron style={jumbotronStyle}>
-        <h1>The Credit Rewards Cheatsheet</h1>
-        <h3>Know which credit card to use for all your purchases!</h3>
-        <br />
-        <LinkContainer style={linkContainerStyle} to="/dashboard">
-          <Button bsStyle="info">Get Started</Button>
-        </LinkContainer>
-      </Jumbotron>
-    </div>
-  );
-};
+class LandingPage extends Component {
+  render() {
+    const { jumbotronStyle, bodyStyle, linkContainerStyle } = styles;
+    return (
+      <div style={bodyStyle}>
+        <Jumbotron style={jumbotronStyle}>
+          <h1>The Credit Rewards Cheatsheet</h1>
+          <h3>Know which credit card to use for all your purchases!</h3>
+          <br />
+          <LinkContainer style={linkContainerStyle} to="/dashboard">
+            <Button bsStyle="info">Get Started</Button>
+          </LinkContainer>
+        </Jumbotron>
+      </div>
+    );
+  }
+}
 
 
 
@@ -46,5 +48,6 @@ const styles = {
     bottom: '20%'
   }
 };
+
 
 export default LandingPage;

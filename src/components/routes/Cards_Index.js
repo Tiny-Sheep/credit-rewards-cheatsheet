@@ -17,10 +17,8 @@ class CardsIndex extends Component {
     
     render() {
         const { indexStyle } = styles;
-        const { cards } = this.props;
-
             return (
-                <div style={indexStyle}>
+                <div className="cards-index" style={indexStyle}>
                     <CreditCardNavBar />
                     <GettingStarted />
                     <CardListSelection />
@@ -41,11 +39,4 @@ const styles = {
   }
 };
 
-
-function mapStateToProps(state) {
-    return {
-        cards: state.cards
-    }
-}
-
-export default connect(mapStateToProps, actions)(CardsIndex);
+export default connect(null, actions)(CardsIndex);

@@ -10,11 +10,11 @@ class LandingPage extends Component {
     return (
       <div style={bodyStyle}>
         <Jumbotron style={jumbotronStyle}>
-          <h1>The Credit Rewards Cheatsheet</h1>
-          <h3>Know which credit card to use for all your purchases!</h3>
+          <h1>THE CREDIT CARD REWARDS CHEATSHEET</h1>
+          <h3>KNOW WHICH CREDIT CARD TO USE FOR ALL YOUR PURCHASES!</h3>
           <br />
           <LinkContainer style={linkContainerStyle} to="/dashboard">
-            <Button bsStyle="info">Get Started</Button>
+            <Button bsStyle="info"><h6>GET STARTED</h6></Button>
           </LinkContainer>
         </Jumbotron>
       </div>
@@ -35,7 +35,7 @@ const styles = {
     backgroundColor: 'rgba(200,240,255,.7)',
     textAlign: 'center',
     color: 'white',
-    textShadow: '1px 1px 1px black'
+    textShadow: '1px 1px black'
   },
   bodyStyle: {
     backgroundImage: `url(${imgBackground})`,

@@ -18,7 +18,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/dashboard" component={CardsIndex} />
-        <Route path="/cards" component={CardsShow} />
+        <Route path="/cards" component={CardsIndex} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </BrowserRouter>

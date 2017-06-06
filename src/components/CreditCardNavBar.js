@@ -24,7 +24,7 @@ const CreditCardNavBar = (props) => {
         <Navbar.Collapse>
           <Nav pullRight>
             <LinkContainer to="/cards">
-              <NavItem >
+              <NavItem>
                 <p style={navItemStyle}>Credit Cards</p>
               </NavItem>
             </LinkContainer>
@@ -38,16 +38,17 @@ const CreditCardNavBar = (props) => {
 const styles = {
   navBarStyle: {
     backgroundColor: 'rgb(200,240,255)',
-    boxShadow: '1px 1px 1px grey',
+    boxShadow: '1px 1px 1px black',
   },
   textBrandStyle: {
     color: 'white',
-    textShadow: '1px 1px 1px grey',
+    textShadow: '1px 1px 1px black',
     fontSize: 24
   },
   navItemStyle: {
     color: 'white',
-    textShadow: '1px 1px 1px grey',
+    backgroundColor: 'rgb(200,240,255)', 
+    textShadow: '1px 1px 1px black',
     fontSize: 16
   }
 };

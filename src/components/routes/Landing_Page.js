@@ -10,7 +10,7 @@ class LandingPage extends Component {
     return (
       <div style={bodyStyle}>
         <Jumbotron style={jumbotronStyle}>
-          <h1>THE CREDIT CARD REWARDS CHEATSHEET</h1>
+          <h1>THE CREDIT REWARDS CHEATSHEET</h1>
           <h3>KNOW WHICH CREDIT CARD TO USE FOR ALL YOUR PURCHASES!</h3>
           <br />
           <LinkContainer style={linkContainerStyle} to="/dashboard">

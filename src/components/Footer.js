@@ -6,9 +6,10 @@ const Footer = () => {
 
   return (
     <footer style={ jumbotronStyle }>
+      <h5>Created by Kristopher Parchen</h5>
       <h5><a style={linkColorStyle} href="http://krystneto.github.io/portfolio/">About</a></h5>
       <h5>Email: <a style={ linkColorStyle } href="mailto:kkparchen@gmail.com">kkparchen@gmail.com</a></h5>
-      <h5>©Kristopher Parchen</h5>
+      <h5>© Credit-Rewards-Cheatsheet.herokuapp.com. All rights reserved.</h5>
     </footer>
   );
 };

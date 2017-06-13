@@ -52,19 +52,26 @@ class CardListSelection extends Component {
         const { cards } = this.props;
         const { textStyle } = styles;
 
-        if (!cards) { return <div>Please wait...loading</div>; }
-        
-        return (
-            <div style={textStyle}>
-                <h1>Step 1:</h1>
-                <h2>Select Your Cards</h2>
-                <Grid fluid>
-                    <Row>
-                        {this.renderThumbnails()}
-                    </Row>
-                </Grid>
-            </div>
-        );
+        if ( _.isEmpty(cards) ) { 
+            return (
+                <div style={textStyle}>
+                    <h1>Step 1:</h1>
+                    <p>Loading cards...Please wait</p>
+                </div>
+            )
+        } else {
+            return (
+                <div style={textStyle}>
+                    <h1>Step 1:</h1>
+                    <h2>Select Your Cards</h2>
+                    <Grid fluid>
+                        <Row>
+                            {this.renderThumbnails()}
+                        </Row>
+                    </Grid>
+                </div>
+            );
+        }
     }
 }
 

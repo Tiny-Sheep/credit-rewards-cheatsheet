@@ -69,6 +69,7 @@ class CardListSelection extends Component {
                             {this.renderThumbnails()}
                         </Row>
                     </Grid>
+                    <hr />
                 </div>
             );
         }

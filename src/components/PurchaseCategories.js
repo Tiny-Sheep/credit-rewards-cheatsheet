@@ -66,7 +66,7 @@ const styles = {
   },
   containerStyle: {
     width: '55%',
-    margin: '30px auto'
+    margin: '2em auto'
   },
   textStyle: {
     textShadow: '1px 1px 2px black',
@@ -77,7 +77,7 @@ const styles = {
     color: 'black',
     fontFamily: "Helvetica",
     fontSize: 20,
-    marginTop: 10,
+    marginTop: 20
   }
 };
 

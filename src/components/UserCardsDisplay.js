@@ -73,6 +73,7 @@ class UserCardsDisplay extends Component {
                         {this.renderCards()}
                     </Row>
                 </Grid>
+                <hr />
             </div>
         );
     }

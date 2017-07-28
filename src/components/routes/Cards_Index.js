@@ -11,7 +11,7 @@ import DisplayCard from '../DisplayCard';
 import Footer from '../Footer';
 
 class CardsIndex extends Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchCards();
     }
     

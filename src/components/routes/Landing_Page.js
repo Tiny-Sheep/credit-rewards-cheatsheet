@@ -39,13 +39,15 @@ const styles = {
   },
   bodyStyle: {
     backgroundImage: `url(${imgBackground})`,
-    backgroundSize: 'cover',
+    backgroundSize: '100% 100%',
     height: '800px'
   },
   linkContainerStyle: {
-    borderRadius: 2,
+    borderRadius: 3,
     position: 'relative',
-    bottom: '20%'
+    bottom: '20%',
+    textShadow: '0px 0px white',
+    width: '150px'
   }
 };
 

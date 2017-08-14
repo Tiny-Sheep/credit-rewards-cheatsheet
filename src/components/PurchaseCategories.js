@@ -34,7 +34,7 @@ class PurchaseCategories extends Component {
         <h1 style={textStyle}>Step 2:</h1>
         <h2 style={textStyle}>Select Your Purchase Category</h2>
         <div style={containerStyle}>
-          <ButtonGroup style={groupBoxStyle} block vertical bsSize="large">
+          <ButtonGroup style={groupBoxStyle} block vertical>
             <Button onClick={ () => this.selectCategory('dining', userCards) }><span className="fa fa-cutlery"> <p style={categoryTextStyle}>Dining</p></span></Button>
             <Button onClick={ () => this.selectCategory('airfare', userCards) }><span className="fa fa-plane"> <p style={categoryTextStyle}>Airfare</p></span></Button>
             <Button onClick={ () => this.selectCategory('hotels', userCards) }><span className="fa fa-hotel"> <p style={categoryTextStyle}>Hotels</p></span></Button>

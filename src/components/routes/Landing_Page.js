@@ -24,7 +24,7 @@ class LandingPage extends Component {
 
 
 
-const imgBackground = 'http://i.imgur.com/cqxzeR2.jpg';
+const imgBackground = 'https://i.imgur.com/cqxzeR2.jpg';
 const styles = {
   jumbotronStyle: {
     position: 'absolute',

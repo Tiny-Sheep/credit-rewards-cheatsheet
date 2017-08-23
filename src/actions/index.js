@@ -64,8 +64,6 @@ export function addUserCard(event, userCards, cards) {
     const cardDuplicate = _.find(userCards, card => {
         return card._id === selectedCard[0]._id
     });
-    console.log(selectedCard);
-    console.log(cardDuplicate);
 
     let card = selectedCard[0];
 

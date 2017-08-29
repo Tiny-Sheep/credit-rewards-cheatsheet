@@ -31,7 +31,6 @@ class CardsIndex extends Component {
     }
 }
 
-// const imgURL = 'http://i.imgur.com/cqxzeR2.jpg'
 const styles = {
   indexStyle: {
     textAlign: 'center',

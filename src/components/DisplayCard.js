@@ -42,6 +42,7 @@ class DisplayCard extends Component {
     const { selectedCategory } = this.props.selectedCategory;
 
     const { cardNameStyle, valueStyle, textStyle, jumbotronStyle } = styles;
+    const POINTS_GUY_URL = 'https://thepointsguy.com/2017/08/august-2017-monthly-valuations/'
 
     if (!bestCard) return <div style={ {visibility: 'hidden'} }></div>
     
@@ -51,7 +52,7 @@ class DisplayCard extends Component {
         <h2>Use <span style={ cardNameStyle }>{bestCard.name}</span> For <span style={ cardNameStyle }>{bestCard.category[selectedCategory]}x</span> Reward Points!</h2>
         <Image src={bestCard.image} thumbnail></Image>
         <h2>Valued at <span style={ valueStyle }> { (bestCard.valuedEarning * bestCard.category[selectedCategory]).toFixed(1)}</span> cents per dollar spent!</h2>
-        <h4><a href="https://thepointsguy.com/2017/07/july-2017-monthly-valuations/">See how the points are valued</a></h4>
+        <h4><a href={POINTS_GUY_URL}>See how the points are valued</a></h4>
       </Jumbotron>
     );
   }

@@ -45,7 +45,7 @@ const styles = {
   linkContainerStyle: {
     borderRadius: 3,
     position: 'relative',
-    bottom: '20%',
+    bottom: '10px',
     textShadow: '0px 0px white',
     width: '150px'
   }

@@ -42,7 +42,7 @@ class DisplayCard extends Component {
     const { selectedCategory } = this.props.selectedCategory;
 
     const { cardNameStyle, valueStyle, textStyle, jumbotronStyle } = styles;
-    const POINTS_GUY_URL = 'https://thepointsguy.com/2017/08/august-2017-monthly-valuations/'
+    const POINTS_GUY_URL = 'https://thepointsguy.com/2017/09/september-2017-monthly-valuations/'
 
     if (!bestCard) return <div style={ {visibility: 'hidden'} }></div>
     

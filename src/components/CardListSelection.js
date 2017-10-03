@@ -83,7 +83,7 @@ const styles = {
     textStyle: {
         textShadow: '1px 1px 2px black',
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
     }
 }
 

@@ -18,9 +18,9 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <Switch>
-        <Route path="/dashboard" component={CardsIndex} />
         <Route path="/cards" component={CardsIndex} />
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/" component={CardsIndex} />
+        {/* <Route exact path="/" component={LandingPage} /> */}
         <Route component={NotFound_Route} />
       </Switch>
     </BrowserRouter>
